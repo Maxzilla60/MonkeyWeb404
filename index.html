@@ -4,7 +4,7 @@
 	<title>RESTful Dinges</title>
 </head>
 <body>
- 
+
 <h1>RESTful Dinges</h1>
 
 <button onclick="getAllEvents();">GET ALL</button><br>
@@ -14,7 +14,7 @@
 
 <input id="Date1" type="date"></input>
 <input id="Date2" type="date"></input>
-<button>BETWEEN DATES</button><br>
+<button onclick="getEventsBetweenDates(document.getElementById('Date1').value,document.getElementById('Date2').value);">BETWEEN DATES</button><br>
 
 <button>PERSON & DATE</button><br>
 
