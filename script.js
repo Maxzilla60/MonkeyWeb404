@@ -1,13 +1,31 @@
-var xhr = new XMLHttpRequest();
+function getAllEvents() {
+    var xhr = new XMLHttpRequest();
 
-xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("p").innerHTML = this.responseText;
-    }
-};
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("output").innerHTML = this.responseText;
+        }
+    };
 
-xhr.open("GET", "getevent.php?q=5", false);
-xhr.send();
+    xhr.open("GET", "getallevents.php", false);
+    xhr.send();
 
-console.log(xhr.status);
-console.log(xhr.statusText);
+    console.log(xhr.status);
+    console.log(xhr.statusText);
+}
+
+function getEventsByID(id) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("output").innerHTML = this.responseText;
+        }
+    };
+
+    xhr.open("GET", "geteventbyid.php?q="+id, false);
+    xhr.send();
+
+    console.log(xhr.status);
+    console.log(xhr.statusText);
+}

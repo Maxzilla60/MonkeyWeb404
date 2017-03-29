@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Testing dinges</title>
+	<title>RESTful Dinges</title>
 </head>
 <body>
+ 
+<h1>RESTful Dinges</h1>
 
-<h1>My First Heading</h1>
+<button onclick="getAllEvents();">GET ALL</button><br>
 
-<p id="p">My first paragraph.</p>
+<input id="EventID" type="number"></input>
+<button onclick="getEventsByID(document.getElementById('EventID').value);">GET BY ID</button><br>
+
+<input id="Date1" type="date"></input>
+<input id="Date2" type="date"></input>
+<button>BETWEEN DATES</button><br>
+
+<button>PERSON & DATE</button><br>
+
+<div style="border: solid" id="output"></div>
 
 </body>
 <script type="text/javascript" src="script.js"></script>

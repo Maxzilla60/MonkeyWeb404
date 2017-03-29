@@ -13,7 +13,7 @@ try {
     $pdo->setAttribute( PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION );
     
-    foreach($pdo->query("SELECT * FROM events WHERE personID=".$q) as $row) {
+    foreach($pdo->query("SELECT * FROM events WHERE ID=".$q) as $row) {
         echo $row['ID'] . ' ' . $row['Name'] . '<br>';
     }
 } catch ( PDOException $e ) {
