@@ -10,8 +10,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 $requestBody = file_get_contents('php://input');
 
 if ($method == 'GET') {
-    if (isset($pathSegments[3])) {
-        $id = $pathSegments[3];
+    if (isset($pathSegments[4])) {
+        $id = $pathSegments[4];
 
         try {
             $pdo = new PDO( "mysql:host=localhost;dbname=$database",
@@ -19,7 +19,7 @@ if ($method == 'GET') {
             $pdo->setAttribute( PDO::ATTR_ERRMODE,
                 PDO::ERRMODE_EXCEPTION );
 
-            foreach($pdo->query("SELECT * FROM events WHERE ID=".$q) as $row) {
+            foreach($pdo->query("SELECT * FROM events WHERE ID=".$id) as $row) {
                 $name = $row['Name'];
             }
 
