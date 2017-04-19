@@ -30,7 +30,7 @@ function getEventsByID(id) {
     console.log(xhr.statusText);
 }
 
-function getEventsBetweenDates(date1,date2) {
+function getEventsBetweenDates(date1, date2) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -40,15 +40,17 @@ function getEventsBetweenDates(date1,date2) {
     };
 
     xhr.open("GET", "old/geteventbetweendates.php?from=+"+date1+"\"&until=+"+date2, false);
+    //xhr.open("GET", "/events/?=from="+date1+"&until="date2, false);
+
     xhr.send();
 
-    console.log("Date1: "+date1);
+    //console.log("Date1: "+date1);
 
     console.log(xhr.status);
     console.log(xhr.statusText);
 }
 
-/*function getByDateAndPerson(date, person) {
+/*function getByPersonAndBetweenDates(person, date1, date2) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -57,7 +59,7 @@ function getEventsBetweenDates(date1,date2) {
         }
     };
 
-    xhr.open("GET", "old/geteventbetweendates.php?from=+"+date1+"\"&until=+"+date2, false);
+    xhr.open("GET", "/person/"+person+"/events/?from="+date1+"&until="+date2, false);
     xhr.send();
 
     console.log("Date1: "+date1);

@@ -16,7 +16,7 @@ if ($method == 'GET') {
     if ($url['path'] == "/~user/monkey/api/events/") {
         // Open database connection:
         try {
-            $pdo = new PDO( "mysql:host=localhost;dbname=$database",
+            $pdo = new PDO("mysql:host=localhost;dbname=$database",
                 $user, $password );
             $pdo->setAttribute( PDO::ATTR_ERRMODE,
                 PDO::ERRMODE_EXCEPTION );
@@ -45,7 +45,7 @@ if ($method == 'GET') {
         $id = $pathSegments[4]; // Keep requested ID
         // Open database connection:
         try {
-            $pdo = new PDO( "mysql:host=localhost;dbname=$database",
+            $pdo = new PDO("mysql:host=localhost;dbname=$database",
                 $user, $password );
             $pdo->setAttribute( PDO::ATTR_ERRMODE,
                 PDO::ERRMODE_EXCEPTION );
@@ -69,4 +69,10 @@ if ($method == 'GET') {
         header('Content-Type: application/json');
         echo json_encode($event);
     }
+    // GET between Dates:
+    // GET between Person and Dates:
+    /*
+        $from = intval($_GET['from']);
+        $until = intval($_GET['until']);
+    */
 }
