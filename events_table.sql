@@ -9,7 +9,7 @@ CREATE TABLE events(
 INSERT INTO `events`(`PersonID`, `StartDate`, `EndDate`, `Name`)
 VALUES (5, '2015-12-11', '2016-12-20', 'Wereld Apen Dag');
 INSERT INTO `events`(`PersonID`, `StartDate`, `EndDate`, `Name`)
-VALUES (4, '2017-01-15', '2016-01-17', 'Morgenland');
+VALUES (4, '2017-01-15', '2017-01-17', 'Morgenland');
 INSERT INTO `events`(`PersonID`, `StartDate`, `EndDate`, `Name`)
 VALUES (6, '2017-05-05', '2017-03-22', 'Wow Koel!');
 INSERT INTO `events`(`PersonID`, `StartDate`, `EndDate`, `Name`)

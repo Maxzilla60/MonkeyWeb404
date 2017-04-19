@@ -39,12 +39,8 @@ function getEventsBetweenDates(date1, date2) {
         }
     };
 
-    xhr.open("GET", "old/geteventbetweendates.php?from=+"+date1+"\"&until=+"+date2, false);
-    //xhr.open("GET", "/events/?=from="+date1+"&until="date2, false);
-
+    xhr.open("GET", "api/events/?from="+date1+"&until="+date2, false);
     xhr.send();
-
-    //console.log("Date1: "+date1);
 
     console.log(xhr.status);
     console.log(xhr.statusText);
