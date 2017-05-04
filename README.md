@@ -1,3 +1,9 @@
 # MonkeyWeb404
+## Werkpakket 1
 
-Wss gaat niemand dit ooit lezen
+# Teamleden
+* Boo Strackx
+* ~~Eran Kaelen~~
+* Maxime Orione
+* Neel Nilis
+* Steven Palmaerts
