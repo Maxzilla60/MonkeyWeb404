@@ -7,7 +7,7 @@ function getAllEvents() {
         }
     };
 
-    xhr.open("GET", "api/events/", false);
+    xhr.open("GET", "api/events", false);
     xhr.send();
 
     console.log(xhr.status);
@@ -24,6 +24,22 @@ function getEventsByID(id) {
     };
 
     xhr.open("GET", "api/events/"+id, false);
+    xhr.send();
+
+    console.log(xhr.status);
+    console.log(xhr.statusText);
+}
+
+function getEventsByPerson(id) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("output").innerHTML = this.responseText;
+        }
+    };
+
+    xhr.open("GET", "api/events/person/"+id, false);
     xhr.send();
 
     console.log(xhr.status);

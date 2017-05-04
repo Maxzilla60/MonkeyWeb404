@@ -7,21 +7,34 @@ try {
     $router = new AltoRouter();
     $router->setBasePath('/~user/monkey/api');
 
-    $router->map('GET', '/events/?',
-        function() use ($controller) {
-            $controller->getBetweenDates($_GET['from'],$_GET['until']);
-        }
-    );
-
+    // GET all
     $router->map('GET', '/events/',
         function() use ($controller) {
+            header('Content-Type: application/json');
             $controller->getAll();
         }
     );
-
+    
+    // GET by id
     $router->map('GET', '/events/[i:id]',
         function($id) use ($controller) {
+            header('Content-Type: application/json');
             $controller->getByID($id);
+        }
+    );    
+    
+    // GET by person id
+    $router->map('GET', '/events/person/[i:id]',
+        function($id) use ($controller) {
+            header('Content-Type: application/json');
+            $controller->getByPersonID($id);
+        }
+    );
+
+    // GET between dates
+    $router->map('GET', '/events/byDate/',
+        function() use ($controller) {
+            $controller->getBetweenDates($_GET["from"],$_GET["until"]);
         }
     );
 
