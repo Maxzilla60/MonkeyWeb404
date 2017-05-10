@@ -7,7 +7,7 @@ function getAllEvents() {
         }
     };
 
-    xhr.open("GET", "api/events", false);
+    xhr.open("GET", "api/events/", false);
     xhr.send();
 
     console.log(xhr.status);
@@ -58,14 +58,14 @@ function getEventsBetweenDates(date1, date2) {
         }
     };
 
-    xhr.open("GET", "api/events/?from="+date1+"&until="+date2, false);
+    xhr.open("GET", "api/events/byDate/?from="+date1+"&until="+date2, false);
     xhr.send();
 
     console.log(xhr.status);
     console.log(xhr.statusText);
 }
 
-/*function getByPersonAndBetweenDates(person, date1, date2) {
+function getByPersonAndBetweenDates(person, date1, date2) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -74,11 +74,11 @@ function getEventsBetweenDates(date1, date2) {
         }
     };
 
-    xhr.open("GET", "/person/"+person+"/events/?from="+date1+"&until="+date2, false);
+    xhr.open("GET", "api/events/person/"+person+"/byDate/?from="+date1+"&until="+date2, false);
     xhr.send();
 
     console.log("Date1: "+date1);
 
     console.log(xhr.status);
     console.log(xhr.statusText);
-}*/
+}

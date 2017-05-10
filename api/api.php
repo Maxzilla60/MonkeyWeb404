@@ -34,7 +34,16 @@ try {
     // GET between dates
     $router->map('GET', '/events/byDate/',
         function() use ($controller) {
+            header('Content-Type: application/json');
             $controller->getBetweenDates($_GET["from"],$_GET["until"]);
+        }
+    );
+
+    // GET by person id and between dates
+    $router->map('GET', '/events/person/[i:id]/byDate/',
+        function($id) use ($controller) {
+            header('Content-Type: application/json');
+            $controller->getByPersonIDAndDates($id,$_GET["from"],$_GET["until"]);
         }
     );
 
