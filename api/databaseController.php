@@ -3,8 +3,6 @@
 class DBController
 {
     function getAll() {
-        //echo "Get all<br>";
-
         try {
             // Open connection to DB:
             $pdo = new PDO("mysql:host=localhost;dbname=monkey",
@@ -36,82 +34,88 @@ class DBController
         echo json_encode($events, JSON_PRETTY_PRINT);
     }
     
-    function getByID($id) {
-        //echo "Get by id (".$id.")<br>";
+    function getByID($id)
+    {
+        // Check for empty id:
+        if ($id == null) {
+            http_response_code(406);
+        }
+        else {
+            try {
+                // Open connection to DB:
+                $pdo = new PDO("mysql:host=localhost;dbname=monkey",
+                    'root', 'user');
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        try {
-            // Open connection to DB:
-            $pdo = new PDO("mysql:host=localhost;dbname=monkey",
-                'root', 'user' );
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            // Create array for each result:
-            $i = 0;
-            $events = array();
-            foreach ($pdo->query("SELECT * FROM events WHERE ID=" . $id) as $row) {
-                // Create class:
-                $events[$i] = new StdClass();
-                $events[$i]->id = $row['ID'];
-                $events[$i]->name = $row['Name'];
-                $events[$i]->personid = $row['PersonID'];
-                $events[$i]->startdate = $row['StartDate'];
-                $events[$i]->enddate = $row['EndDate'];
-                $i++;
+                // Create array for each result:
+                $i = 0;
+                $events = array();
+                foreach ($pdo->query("SELECT * FROM events WHERE ID=" . $id) as $row) {
+                    // Create class:
+                    $events[$i] = new StdClass();
+                    $events[$i]->id = $row['ID'];
+                    $events[$i]->name = $row['Name'];
+                    $events[$i]->personid = $row['PersonID'];
+                    $events[$i]->startdate = $row['StartDate'];
+                    $events[$i]->enddate = $row['EndDate'];
+                    $i++;
+                }
+            } catch (PDOException $e) {
+                print 'Exception!: ' . $e->getMessage();
             }
-        }
-        catch ( PDOException $e ) {
-            print 'Exception!: ' . $e->getMessage();
-        }
-        $pdo = null; // Close connection
+            $pdo = null; // Close connection
 
-        // Send results:
-        http_response_code(200);
-        header('Content-Type: application/json');
-        echo json_encode($events, JSON_PRETTY_PRINT);
+            // Send results:
+            http_response_code(200);
+            header('Content-Type: application/json');
+            echo json_encode($events, JSON_PRETTY_PRINT);
+        }
     }
     
-    function getByPersonID($id) {
-        //echo "Get by person id (".$id.")<br>";
+    function getByPersonID($id)
+    {
+        // Check for empty id:
+        if ($id == null) {
+            http_response_code(406);
+        }
+        else {
+            try {
+                // Open connection to DB:
+                $pdo = new PDO("mysql:host=localhost;dbname=monkey",
+                    'root', 'user');
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        try {
-            // Open connection to DB:
-            $pdo = new PDO("mysql:host=localhost;dbname=monkey",
-                'root', 'user' );
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            // Create array for each result:
-            $i = 0;
-            $events = array();
-            foreach($pdo->query("SELECT * FROM events WHERE PersonID=". $id) as $row) {
-                // Create class:
-                $events[$i] = new StdClass();
-                $events[$i]->id = $row['ID'];
-                $events[$i]->name = $row['Name'];
-                $events[$i]->personid = $row['PersonID'];
-                $events[$i]->startdate = $row['StartDate'];
-                $events[$i]->enddate = $row['EndDate'];
-                $i++;
+                // Create array for each result:
+                $i = 0;
+                $events = array();
+                foreach ($pdo->query("SELECT * FROM events WHERE PersonID=" . $id) as $row) {
+                    // Create class:
+                    $events[$i] = new StdClass();
+                    $events[$i]->id = $row['ID'];
+                    $events[$i]->name = $row['Name'];
+                    $events[$i]->personid = $row['PersonID'];
+                    $events[$i]->startdate = $row['StartDate'];
+                    $events[$i]->enddate = $row['EndDate'];
+                    $i++;
+                }
+            } catch (PDOException $e) {
+                print 'Exception!: ' . $e->getMessage();
             }
-        }
-        catch ( PDOException $e ) {
-            print 'Exception!: ' . $e->getMessage();
-        }
-        $pdo = null; // Close connection
+            $pdo = null; // Close connection
 
-        // Send results:
-        http_response_code(200);
-        header('Content-Type: application/json');
-        echo json_encode($events, JSON_PRETTY_PRINT);
+            // Send results:
+            http_response_code(200);
+            header('Content-Type: application/json');
+            echo json_encode($events, JSON_PRETTY_PRINT);
+        }
     }
 
     function getBetweenDates($from,$until) {
-        // Check for filled in URL variables
+        // Check for empty from & until:
         if ($from == null || $until == null) {
-            echo "Please set from & until.";
+            http_response_code(406);
         }
         else {
-            //echo "Get between Dates (" . $from . "," . $until . ")\n\n";
-
             try {
                 // Open connection to DB:
                 $pdo = new PDO("mysql:host=localhost;dbname=monkey",
@@ -145,13 +149,11 @@ class DBController
     }
 
     function getByPersonIDAndDates($id,$from,$until) {
-        // Check for filled in URL variables
+        // Check for empty id, from & until:
         if ($id == null || $from == null || $until == null) {
-            echo "Please set id & from & until.\n";
+            http_response_code(406);
         }
         else {
-            //echo "id = ".$id."\nfrom = ".$from."\nuntil = ".$until."\n";
-
             try {
                 // Open connection to DB:
                 $pdo = new PDO("mysql:host=localhost;dbname=monkey",
@@ -185,14 +187,14 @@ class DBController
     }
 
     function postEvent($req) {
+        // Decode incoming request body to JSON
         $json = json_decode($req, true);
 
-        // Check for filled in request parameters:
+        // Check for empty name, personid, startdate & enddate:
         if ($json['name'] == null ||
             $json['personid'] == null ||
             $json['startdate'] == null ||
             $json['enddate'] == null) {
-            echo $req;
             http_response_code(406);
         }
         else {
@@ -203,19 +205,23 @@ class DBController
                 $pdo->setAttribute(PDO::ATTR_ERRMODE,
                     PDO::ERRMODE_EXCEPTION);
 
-                // ...
+                // Create prepared INSERT statement
                 $stmt = $pdo->prepare("INSERT INTO events(Name, PersonID, StartDate, EndDate) VALUES (:name, :personid, :startdate, :enddate)");
+
+                // Bind parameters:
                 $stmt->bindParam(':name', $json['name']);
                 $stmt->bindParam(':personid', $json['personid']);
                 $stmt->bindParam(':startdate', $json['startdate']);
                 $stmt->bindParam(':enddate', $json['enddate']);
 
+                // Execute INSERT
                 $stmt->execute();
             } catch (PDOException $e) {
                 print 'Exception!: ' . $e->getMessage();
             }
             $pdo = null; // Close connection
 
+            // Send OK
             http_response_code(200);
         }
     }
