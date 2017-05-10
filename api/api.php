@@ -47,6 +47,14 @@ try {
         }
     );
 
+    //POST event
+    $router->map('POST', '/events/',
+        function() use ($controller) {
+            //header('Content-Type: application/json');
+            $controller->postEvent(file_get_contents('php://input'),true);
+        }
+    );
+
     $match = $router->match();
 
     if ($match && is_callable($match['target'])) {

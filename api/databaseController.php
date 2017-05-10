@@ -183,5 +183,9 @@ class DBController
             echo json_encode($events, JSON_PRETTY_PRINT);
         }
     }
+
+    function postEvent($req) {
+        $json = json_decode($req, true);
+    }
 }
 ?>

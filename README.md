@@ -9,6 +9,7 @@
 - [x] GET by Person ID & Date
 - [ ] POST Event
 - [ ] PHPUNIT
+- [ ] Comments
 
 # Teamleden
 * Boo Strackx

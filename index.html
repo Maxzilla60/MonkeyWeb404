@@ -24,6 +24,15 @@
 
 <pre style="border: solid" id="output"></pre>
 
+<input placeholder="Name" id="post_Name" type="text">
+<input placeholder="PersonID" id="post_PersonID" type="number">
+<input id="post_StartDate" type="date">
+<input id="post_EndDate" type="date">
+<button onclick="postEvent(document.getElementById('post_Name').value,
+document.getElementById('post_PersonID').value,
+document.getElementById('post_StartDate').value,
+document.getElementById('post_EndDate').value);">POST EVENT</button>
+
 </body>
 <script type="text/javascript" src="script.js"></script>
 </html>
