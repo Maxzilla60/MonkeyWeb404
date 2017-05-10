@@ -186,6 +186,38 @@ class DBController
 
     function postEvent($req) {
         $json = json_decode($req, true);
+
+        // Check for filled in request parameters:
+        if ($json['name'] == null ||
+            $json['personid'] == null ||
+            $json['startdate'] == null ||
+            $json['enddate'] == null) {
+            echo $req;
+            http_response_code(406);
+        }
+        else {
+            try {
+                // Open connection to DB:
+                $pdo = new PDO("mysql:host=localhost;dbname=monkey",
+                    'root', 'user');
+                $pdo->setAttribute(PDO::ATTR_ERRMODE,
+                    PDO::ERRMODE_EXCEPTION);
+
+                // ...
+                $stmt = $pdo->prepare("INSERT INTO events(Name, PersonID, StartDate, EndDate) VALUES (:name, :personid, :startdate, :enddate)");
+                $stmt->bindParam(':name', $json['name']);
+                $stmt->bindParam(':personid', $json['personid']);
+                $stmt->bindParam(':startdate', $json['startdate']);
+                $stmt->bindParam(':enddate', $json['enddate']);
+
+                $stmt->execute();
+            } catch (PDOException $e) {
+                print 'Exception!: ' . $e->getMessage();
+            }
+            $pdo = null; // Close connection
+
+            http_response_code(200);
+        }
     }
 }
 ?>

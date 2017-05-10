@@ -7,7 +7,7 @@
 - [x] GET by Person ID
 - [x] GET by Date
 - [x] GET by Person ID & Date
-- [ ] POST Event
+- [x] POST Event
 - [ ] PHPUNIT
 - [ ] Comments
 

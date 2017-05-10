@@ -82,7 +82,10 @@ function postEvent(name, person, date1, date2) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState == 4 && this.status == 406) {
+            alert("Not all data is set");
+        }
+        else if (this.readyState == 4 && this.status == 200) {
             document.getElementById("output").innerHTML = this.responseText;
             alert(name + " toegevoegd!");
         }
