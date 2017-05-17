@@ -2,9 +2,9 @@
 ## Werkpakket 1 (Maxime Orione)
 
 # Note
-**Werkpakket 1 bevind zich op branch `master`.
+**Werkpakket 1 bevind zich op branch `master`.**
 
-Werkpakket 3, 4 en 5 bevinden zich op respectievelijke branchen `pakket3`, `pakket4` en `pakket5`.**
+**Werkpakket 3, 4 en 5 bevinden zich op respectievelijke branchen `pakket3`, `pakket4` en `pakket5`.**
 
 # TODO
 - [x] GET All
