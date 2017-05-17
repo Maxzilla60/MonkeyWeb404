@@ -2,7 +2,7 @@
 
 class DBController
 {
-    function getAll() {
+    public function getAll() {
         try {
             // Open connection to DB:
             $pdo = new PDO("mysql:host=localhost;dbname=monkey",
@@ -30,8 +30,9 @@ class DBController
 
         // Send results:
         http_response_code(200);
-        header('Content-Type: application/json');
+        //header('Content-Type: application/json');
         echo json_encode($events, JSON_PRETTY_PRINT);
+        return json_encode($events);
     }
     
     function getByID($id)
@@ -67,8 +68,9 @@ class DBController
 
             // Send results:
             http_response_code(200);
-            header('Content-Type: application/json');
+            //header('Content-Type: application/json');
             echo json_encode($events, JSON_PRETTY_PRINT);
+            return json_encode($events);
         }
     }
     
