@@ -47,11 +47,25 @@ try {
         }
     );
 
-    //POST event
+    // POST event
     $router->map('POST', '/events/',
         function() use ($controller) {
             //header('Content-Type: application/json');
             $controller->postEvent(file_get_contents('php://input'),true);
+        }
+    );
+
+    // DELETE event (GET)
+    $router->map('GET', '/events/delete/[i:id]',
+        function ($id) use ($controller) {
+            $controller->deleteEvent($id);
+        }
+    );
+
+    // EDIT event (POST)
+    $router->map('POS', '/events/edit/[i:id]',
+        function ($id) use ($controller) {
+            $controller->editEvent($id, file_get_contents('php//input'));
         }
     );
 
