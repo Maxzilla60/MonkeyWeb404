@@ -1,0 +1,617 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"res",
+				"result"
+			],
+			[
+				"pri",
+				"println"
+			],
+			[
+				"pr",
+				"println"
+			],
+			[
+				"Cal",
+				"Calculator"
+			],
+			[
+				"get",
+				"getWriter\t(HelloWorldServlet.java)"
+			],
+			[
+				"set",
+				"setCharacterEncoding\t(HelloWorldServlet.java)"
+			],
+			[
+				"resp",
+				"response"
+			],
+			[
+				"r",
+				"result"
+			],
+			[
+				"Num",
+				"number"
+			],
+			[
+				"thr",
+				"throw\t(HelloWorldServlet.java)"
+			],
+			[
+				"reQ",
+				"request"
+			],
+			[
+				"Htt",
+				"HttpServletResponse\t(HelloWorldServlet.java)"
+			],
+			[
+				"Htttp",
+				"HttpServletRequest\t(HelloWorldServlet.java)"
+			],
+			[
+				"pu",
+				"public\t(HelloWorldServlet.java)"
+			],
+			[
+				"p",
+				"php\t<?php … ?>"
+			],
+			[
+				"pa",
+				"pathSegments"
+			],
+			[
+				"is_nu",
+				"is_numeric〔function〕"
+			],
+			[
+				"ad",
+				"Add"
+			],
+			[
+				"Wa",
+				"Wachtwoord\t(Gebruiker.cs)"
+			],
+			[
+				"a",
+				"Add"
+			],
+			[
+				"Bed",
+				"Bedrijfscontact\t(database_create_MSSQL.sql)"
+			],
+			[
+				"Bedr",
+				"Bedrijfscontact\t(database_create_MSSQL.sql)"
+			],
+			[
+				"lo",
+				"location_id"
+			],
+			[
+				"Loca",
+				"location_id"
+			],
+			[
+				"v_",
+				"v_index_name"
+			],
+			[
+				"v",
+				"v_index_name"
+			],
+			[
+				"v_ind",
+				"v_index_name"
+			],
+			[
+				"dat",
+				"v_date_table"
+			],
+			[
+				"da",
+				"date_table_type"
+			],
+			[
+				"Con",
+				"Contact_ID"
+			],
+			[
+				"bed",
+				"bedrijfscontacten"
+			],
+			[
+				"bedrij",
+				"bedrijven"
+			],
+			[
+				"Lec",
+				"Lector_ID"
+			],
+			[
+				"St",
+				"StageCoordinator_ID"
+			],
+			[
+				"Ac",
+				"Account_ID"
+			],
+			[
+				"Sti",
+				"Student_ID"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"sm",
+				"x-small"
+			],
+			[
+				"borde",
+				"border-color"
+			],
+			[
+				"chem",
+				"chemspell"
+			],
+			[
+				"au",
+				"autofocus\tAttr"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"D",
+				"DBMS_OUTPUT.PUT_LINE\t(Week 5.txt)"
+			],
+			[
+				"dep",
+				"department_name"
+			],
+			[
+				"d",
+				"departments\t(Oefeningen_Week 4.txt)"
+			],
+			[
+				"bash",
+				"bash_aliases"
+			],
+			[
+				"callL",
+				"callLogList"
+			],
+			[
+				"elem",
+				"elements"
+			],
+			[
+				"DEP",
+				"department_id"
+			],
+			[
+				"sta",
+				"v_start_date"
+			],
+			[
+				"empl",
+				"v_employee_id"
+			],
+			[
+				"end",
+				"v_end_date"
+			],
+			[
+				"b",
+				"background-color"
+			],
+			[
+				"de",
+				"department_name"
+			],
+			[
+				"job",
+				"JOB_ID"
+			],
+			[
+				"te",
+				"test"
+			],
+			[
+				"geb",
+				"geboortedatums"
+			],
+			[
+				"tell",
+				"tellerJobs"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "col",
+		"selected_items":
+		[
+			[
+				"col",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"insta",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pak",
+				"Package Control: Install Package"
+			],
+			[
+				"Color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Package Control: sea",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 181.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/11502759/Documents/School/Java/IntelliJ/helloworld/src/main/java/be/pxl/servlet/CalculatorServlet.java",
+		"/C/Users/11502759/Downloads/session_buddy_export_2017_04_21_11_41_10.html",
+		"/C/Users/11502759/Documents/GitHub/Spelling-with-Elements/index.html",
+		"/C/Users/11502759/Documents/GitHub/Spelling-with-Elements/script.js",
+		"/C/Users/11502759/Documents/School/Web/Personal Projects/chem/script.js",
+		"/C/Users/11502759/Documents/School/Security/Week 7.txt",
+		"/C/Users/11502759/Documents/School/Security/Week 6.txt",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/databaseController.php",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/script.js",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/api/api.php",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/old/geteventbetweendates.php",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/k0jqrixs.d1v.txt",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/index.html",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/README.md",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/old/script.js",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/.gitignore",
+		"/C/Users/11502759/Documents/School/Web/Webserver Login.txt",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/Stagebegeleiding_Model/Stagebegeleiding_Model/Context/StageInitializer.cs",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/Stagebegeleiding_Model/Stagebegeleiding_Model/Model/Student.cs",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/Stagebegeleiding_Model/Stagebegeleiding_Model/Model/Gebruiker.cs",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/Stagebegeleiding_Model/Stagebegeleiding_Model/Model/Lector.cs",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/Stagebegeleiding_Model/Stagebegeleiding_Model/Model/Locatie.cs",
+		"/C/Users/11502759/Documents/GitHub/Spelling-with-Elements/.gitignore",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/Stagebegeleiding_Model/Stagebegeleiding_Model/Model/Bedrijfscontact.cs",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/Stagebegeleiding_Model/Stagebegeleiding_Model/Model/Stagevoorstel.cs",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/Stagebegeleiding_Model/Stagebegeleiding_Model/Model/Bedrijf.cs",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/database_create_MSSQL.sql",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/Stagebegeleiding_Model/Stagebegeleiding_Model/Model/Periode.cs",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/Stagebegeleiding_Model/Stagebegeleiding_Model/Model/Stage.cs",
+		"/C/Users/11502759/Documents/School/Java/IntelliJ/helloworld/src/main/java/be/pxl/servlet/HelloWorldServlet.java",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Model/database_create.sql",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/getallevents.php",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/geteventbetweendates.php",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/events_table.sql",
+		"/C/Users/11502759/Documents/School/Java/IntelliJ/WebApp/src/main/be/pxl/web/HelloWorldServlet.java",
+		"/C/Users/11502759/Documents/School/Java/IntelliJ/WebApp/target/WebApp.war",
+		"/C/xampp/tomcat/conf/server.xml",
+		"/C/Users/11502759/Documents/School/Project AppDev/Statuses.txt",
+		"/C/Users/11502759/Documents/School/SQL/Week 6.txt",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/table_voorbeeld.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/bulk_collect_voorbeeld.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/Les6_Oef1.sql",
+		"/C/Users/11502759/Documents/School/SQL/bulk_collect_voorbeeld.sql",
+		"/C/Users/11502759/Documents/School/SQL/Week 1.txt",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Website/database_create.sql",
+		"/C/Users/11502759/Downloads/appdev.sql",
+		"/C/Users/11502759/Documents/School/Project AppDev/GitHub Key.txt",
+		"/C/Users/11502759/Desktop/Sun Wukong/SunWukong.txt",
+		"/C/Users/11502759/Documents/School/Security/Week 5.txt",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/getevent.php_old",
+		"/C/Users/11502759/Documents/GitHub/MonkeyWeb404/getevent.php",
+		"/C/Users/11502759/Documents/School/SQL/getuser.php",
+		"/C/Users/11502759/Documents/GitHub/Spelling-with-Elements/todo.md",
+		"/C/Users/11502759/Documents/GitHub/Spelling-with-Elements/README.md",
+		"/C/Users/11502759/Documents/GitHub/Spelling-with-Elements/todo.txt",
+		"/C/Users/11502759/Documents/GitHub/Spelling-with-Elements/other/todo.txt",
+		"/C/Users/11502759/Documents/GitHub/Spelling-with-Elements/fhugznn3.mer.txt",
+		"/C/Users/11502759/Documents/GitHub/Spelling-with-Elements/other/examples.txt",
+		"/C/Users/11502759/Desktop/Beste Jana.md",
+		"/C/Users/11502759/Documents/School/SQL/Week 5.txt",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/INTRO_03.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/Les5_Oef1.sql",
+		"/C/Users/11502759/Documents/School/SQL/Week1.txt",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/les5.sql",
+		"/C/Users/11502759/Documents/Virtual Machines/fiksalias.sh",
+		"/C/Users/11502759/Documents/Virtual Machines/fiksaliases.sh",
+		"/C/Users/11502759/AppData/Local/lxss/home/maxime/fiksalias.sh",
+		"/C/Users/11502759/PhpstormProjects/SpellingWithElements/other/todo.txt",
+		"/C/Users/11502759/Documents/School/Java/IntelliJ/PxlJavaAdvanced-CallLog-master/src/main/java/be/pxl/calllog/CallLogApp.java",
+		"/C/Users/11502759/PhpstormProjects/SpellingWithElements/other/examples.txt",
+		"/C/Users/11502759/Documents/School/Java/IntelliJ/PxlJavaAdvanced-CallLog-master/temp/input/testdata1.csv",
+		"/C/Users/11502759/PhpstormProjects/SpellingWithElements/index.html",
+		"/C/Users/11502759/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/11502759/Documents/GitHub/Spelling-with-Elements/LICENSE",
+		"/C/Users/11502759/PhpstormProjects/SpellingWithElements/script.js",
+		"/C/Users/11502759/PhpstormProjects/SpellingWithElements/other/script.js",
+		"/C/Users/11502759/PhpstormProjects/SpellingWithElements/other/unused.js",
+		"/C/Users/11502759/PhpstormProjects/SpellingWithElements/old/script.js",
+		"/C/Users/11502759/PhpstormProjects/SpellingWithElements/elements.js",
+		"/C/Users/11502759/Documents/School/Security/Week 3.txt",
+		"/C/Users/11502759/Documents/School/Security/Week 4.txt",
+		"/C/Users/11502759/Downloads/KBBZDO7OAH.txt",
+		"/C/Users/11502759/Documents/School/SQL/Week 4.txt",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/Oefeningen_Week 4.txt",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/les4.sql",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/README.md",
+		"/C/Users/11502759/Documents/GitHub/AppDev14_2017/Analyse/analyse.md",
+		"/C/Users/11502759/Documents/School/Java/Week 3.txt",
+		"/C/Users/11502759/Documents/School/SQL/Week3.txt",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/datatype_conversion_OPLOSSING.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/buh.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/afiedt.buf",
+		"/C/Users/11502759/Documents/School/SQL/Week 2",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/reg_regid_seq.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/reg_regid_seq_oefening.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/login.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/Sequence Oefening.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen Week 3.txt",
+		"/C/Users/11502759/Documents/School/Project AppDev/scope-template.md",
+		"/C/Users/11502759/Documents/School/Projectweek/Caesar-Cypher/Caesar Cypher/src/CypherApp.java",
+		"/C/Users/11502759/Desktop/uhh.css",
+		"/C/Users/11502759/AppData/Roaming/Sublime Text 3/Packages/User/ColorHighlighter.sublime-settings",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/INTRO_04.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/INTRO_01.sql",
+		"/C/Users/11502759/Documents/School/SQL/Oefeningen/INTRO_02.sql",
+		"/C/Users/11502759/Downloads/scope.md",
+		"/C/Users/11502759/Downloads/SUC-template.md",
+		"/C/Users/11502759/Desktop/Projectweek/Caesar-Cypher/Caesar Cypher/src/CypherTest.java",
+		"/C/Users/11502759/Desktop/Projectweek/xp_practices-master/java/XPPractices/src/Item.java",
+		"/C/Users/11502759/Desktop/xp_practices-master/java/XPPractices/src/Item.java",
+		"/C/Users/11502759/Desktop/xp_practices-master/java/XPPractices/memory.txt",
+		"/C/Users/11502759/Desktop/xp_practices-master/java/XPPractices/test/MyFirstTest.java",
+		"/C/Users/11502759/Desktop/xp_practices-master/java/XPPractices/src/GildedRose.java",
+		"/C/Users/11502759/Documents/ISOs/DreamSpark Keys.txt",
+		"/C/Users/11502759/Desktop/Examen/Server OS Essentials/info.txt",
+		"/C/Users/11502759/Desktop/Examen/Server OS Essentials/Linux/linux server - oefeningen en notities/oefeningen scripting10-11.txt",
+		"/C/Users/11502759/Desktop/Examen/Server OS Essentials/Linux/linux server - oefeningen en notities/notities scripting10-11.txt",
+		"/C/Users/11502759/Desktop/Examen/Server OS Essentials/Linux/linux server - oefeningen en notities/oefeningen Advanced Scripting11.txt",
+		"/C/Users/11502759/Desktop/LinuNotities.txt",
+		"/C/Users/11502759/Desktop/Examen Linux Orione Maxime/Notities.txt",
+		"/C/Users/11502759/Desktop/Examen Linux Orione Maxime/cleanup.sh",
+		"/C/Users/11502759/Desktop/Examen/Server OS Essentials/Linux/linux server - oefeningen en notities/Notities Advanced scripting11.txt",
+		"/C/Users/11502759/AppData/Local/lxss/home/maxime/Oef2.sh",
+		"/C/Users/11502759/Desktop/Examen/Server OS Essentials/Linux/PluralSight/ex1.sh",
+		"/C/Users/11502759/AppData/Local/lxss/home/maxime/hackwifi.sh",
+		"/C/Users/11502759/AppData/Local/lxss/home/maxime/Grootste_DieWerkt.sh",
+		"/C/Users/11502759/Desktop/Examen/Server OS Essentials/Linux/Slides en oefeningen/Week 7 RAID/Info.txt",
+		"/C/Users/11502759/Desktop/examenwinddoos.txt"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"C:\\Users\\11502759\\Documents\\School\\Java\\IntelliJ\\PxlJavaAdvanced-CallLog-master\\src\\main\\java\\be\\pxl\\calllog"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"person",
+			"Periode",
+			"locatie",
+			"stagevoorstellen",
+			"DMBS",
+			"vakgebied",
+			"unique",
+			"AUTO_INCREMENT",
+			"- ",
+			"csv",
+			"document.getElementsByTagName(\"output\")[0].innerHTML",
+			"filtered",
+			"index",
+			"document.getElementById('output').innerHTML",
+			"h1",
+			"e.",
+			"d.",
+			"file",
+			"Login failure,",
+			"error",
+			"thread",
+			"collection",
+			"parse",
+			"inputfolder",
+			"clock",
+			"trunk",
+			"RIP_R_Top",
+			"gebruiker",
+			"kortingen",
+			"verjaardag",
+			"verjaardagen",
+			"B:",
+			"order",
+			"show"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"event",
+			"Stagevoorstel",
+			"Periode",
+			"DBMS",
+			"UNIQUE AUTO_INCREMENT",
+			"* ",
+			"setOutput();",
+			"filteredlist",
+			"found_index",
+			"document.getElementsByTagName(\"output\")[0].innerHTML",
+			"output",
+			"employees.",
+			"departments.",
+			"Parent",
+			"geboortedatum",
+			"geboortedatums",
+			"V:"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": ".htaccess.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
