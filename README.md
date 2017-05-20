@@ -13,8 +13,8 @@
 - [x] GET by Date
 - [x] GET by Person ID & Date
 - [x] POST Event
-- [ ] EDIT Event
-- [ ] DELETE Event
+- [x] EDIT Event
+- [x] DELETE Event
 - [ ] PHPUNIT
 - [x] Comments
 

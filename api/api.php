@@ -51,21 +51,21 @@ try {
     $router->map('POST', '/events/',
         function() use ($controller) {
             //header('Content-Type: application/json');
-            $controller->postEvent(file_get_contents('php://input'),true);
+            $controller->postEvent(file_get_contents('php://input'));
         }
     );
 
     // DELETE event (GET)
     $router->map('GET', '/events/delete/[i:id]',
-        function ($id) use ($controller) {
+        function($id) use ($controller) {
             $controller->deleteEvent($id);
         }
     );
 
     // EDIT event (POST)
-    $router->map('POS', '/events/edit/[i:id]',
-        function ($id) use ($controller) {
-            $controller->editEvent($id, file_get_contents('php//input'));
+    $router->map('POST', '/events/edit/[i:id]',
+        function($id) use ($controller) {
+            $controller->editEvent($id, file_get_contents('php://input'));
         }
     );
 

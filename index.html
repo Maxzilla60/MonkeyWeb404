@@ -38,7 +38,23 @@
 <button onclick="postEvent(document.getElementById('post_Name').value,
 document.getElementById('post_PersonID').value,
 document.getElementById('post_StartDate').value,
-document.getElementById('post_EndDate').value);">POST EVENT</button>
+document.getElementById('post_EndDate').value);">POST EVENT</button><br>
+
+<!-- EDIT EVENT -->
+<input placeholder="ID" id="edit_ID" type="number" required>
+<input placeholder="Name" id="edit_Name" type="text">
+<input placeholder="PersonID" id="edit_PersonID" type="number">
+<input id="edit_StartDate" type="date">
+<input id="edit_EndDate" type="date">
+<button onclick="editEvent(document.getElementById('edit_ID').value,
+document.getElementById('edit_Name').value,
+document.getElementById('edit_PersonID').value,
+document.getElementById('edit_StartDate').value,
+document.getElementById('edit_EndDate').value);">EDIT EVENT</button><br>
+
+<!-- DELETE EVENT -->
+<input placeholder="ID" id="delete_ID" type="number" required>
+<button onclick="deleteEvent(document.getElementById('delete_ID').value)">DELETE EVENT</button>
 
 </body>
 <script type="text/javascript" src="script.js"></script>

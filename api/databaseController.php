@@ -227,5 +227,73 @@ class DBController
             http_response_code(200);
         }
     }
+
+    function deleteEvent($id) {
+        // Check for empty id:
+        if ($id == null || $id == "") {
+            http_response_code(406);
+        }
+        else {
+            try {
+                // Open connection to DB:
+                $pdo = new PDO("mysql:host=localhost;dbname=monkey",
+                    'root', 'user');
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                // Create prepared DELETE statement
+                $stmt = $pdo->prepare("DELETE FROM events WHERE ID = :id");
+
+                // Bind parameter
+                $stmt->bindParam(':id', $id);
+
+                // Execute DELETE
+                $stmt->execute();
+            } catch (PDOException $e) {
+                print 'Exception!: ' . $e->getMessage();
+            }
+            $pdo = null; // Close connection
+
+            // Send OK
+            http_response_code(200);
+        }
+    }
+
+    function editEvent($id, $req) {
+        // Decode incoming request body to JSON
+        $json = json_decode($req, true);
+
+        // Check for empty id:
+        if ($id == null || $id == "") {
+            http_response_code(406);
+        }
+        else {
+            try {
+                // Open connection to DB:
+                $pdo = new PDO("mysql:host=localhost;dbname=monkey",
+                    'root', 'user');
+                $pdo->setAttribute(PDO::ATTR_ERRMODE,
+                    PDO::ERRMODE_EXCEPTION);
+
+                // Create prepared UPDATE statement
+                $stmt = $pdo->prepare("UPDATE events SET Name = :name, PersonID = :personid, StartDate = :startdate, EndDate = :enddate WHERE ID = :id");
+
+                // Bind parameters:
+                $stmt->bindParam(':id', $id);
+                $stmt->bindParam(':name', $json['name']);
+                $stmt->bindParam(':personid', $json['personid']);
+                $stmt->bindParam(':startdate', $json['startdate']);
+                $stmt->bindParam(':enddate', $json['enddate']);
+
+                // Execute UPDATE
+                $stmt->execute();
+            } catch (PDOException $e) {
+                print 'Exception!: ' . $e->getMessage();
+            }
+        }
+        $pdo = null; // Close connection
+
+        // Send OK
+        http_response_code(200);
+    }
 }
 ?>
