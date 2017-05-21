@@ -15,7 +15,7 @@
 - [x] POST Event
 - [x] EDIT Event
 - [x] DELETE Event
-- [ ] PHPUNIT
+- [x] PHPUNIT
 - [x] Comments
 
 # Teamleden
