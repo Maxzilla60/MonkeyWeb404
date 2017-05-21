@@ -4,30 +4,35 @@
 	<title>Werkpakket 5 - Local Storage</title>
 </head>
 <body>
-
 <h1>Werkpakket 5</h1>
 <p>HMTL5 API - Local Storage</p>
+
 <!-- Bron: W3Schools. Link: https://www.w3schools.com/html/html5_webstorage.asp -->
 <script>
     function clickCounter() {
-        if(typeof(Storage) !== "undefined") {
-            if (localStorage.clickcount) {
-                localStorage.clickcount = Number(localStorage.clickcount)+1;
-            } else {
+        if(typeof(Storage) !== "undefined") { 									//Checken of de browser localStorage of sessionStorage ondersteunt
+            if (localStorage.clickcount) { 										//ClickCount is hier de naam van wat je gaat opslaan
+                localStorage.clickcount = Number(localStorage.clickcount)+1; 	//Updaten van de clickcount
+																				//Number() is nodig voor het converteren van de waarden, aangezien ClickCount default als string is ingesteld
+            } else {															//Geen ondersteuning, dus waarde wordt op 1 gezet
                 localStorage.clickcount = 1;
             }
             document.getElementById("result").innerHTML = "Je hebt " + localStorage.clickcount + " keer op de knop geklikt.";
         } else {
-            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            document.getElementById("result").innerHTML = "Sorry, deze browser ondersteunt web storage niet.";
         }
     }
 </script>
 
 <p><button onclick="clickCounter()" type="button">Klik</button></p>
+
 <div id="result"></div>
+
 <p>Klik op de knop om de teller te verhogen.</p>
-<p>Na het sluiten van de browser tab blijft de data opgeslagen, dit is omdat we gebruik maken van 'localStorage'.
-	sessionStorage houdt de data bij per sessie. </p>
+<p>
+	Na het sluiten van de browser tab blijft de data opgeslagen, dit is omdat we gebruik maken van 'localStorage';
+	sessionStorage houdt de data bij per sessie.
+</p>
 
 </body>
 </html>
