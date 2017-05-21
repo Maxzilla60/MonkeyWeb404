@@ -5,7 +5,7 @@ require 'AltoRouter.php';
 try {
     $controller = new DBController();
     $router = new AltoRouter();
-    $router->setBasePath('/~user/FirstProject/FirstProject/WebDev/api');
+    $router->setBasePath('/~user/monkey/api');
 //  /~user/FirstProject/FirstProject/WebDev/api
 //  /~user/monkey/api
     // GET all
