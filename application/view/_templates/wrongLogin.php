@@ -1,9 +1,9 @@
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="../public/css/style.css">
+<link rel="stylesheet" href="<?php echo URL; ?>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" ref="<?php echo URL; ?>css/style.css">
 
 <div class="centered">
-    <p class="centered">Wrong username or password!!!!</p>
+    <p>Wrong username or password!!!!</p>
     </div>
 
     <!-- jQuery, loaded in the recommended protocol-less way -->

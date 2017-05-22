@@ -11,7 +11,7 @@
     <!-- See more here: http://stackoverflow.com/q/2105327/1114320 -->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="<?php echo URL; ?>https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -23,10 +23,9 @@
 
     <!-- navigation -->
     <div class="navigation">
+        <a href="<?php echo URL; ?>landingPage">home</a>
+        <a href="<?php echo URL; ?>evenementenbeheer">Evenementenbeheer</a>
+        <a href="<?php echo URL; ?>werknemers">Werknemers</a>
+        <a href="<?php echo URL; ?>home">logout</a>
 
-        <!--<a href="<?php echo URL; ?>home/exampleone">subpage</a>
-        <a href="<?php echo URL; ?>home/exampletwo">subpage 2</a>
-        <a href="<?php echo URL; ?>songs">songs</a>-->
-        <a href="<?php echo URL; ?>webdev">students</a>
-        <a href="<?php echo URL; ?>">logout</a>
     </div>

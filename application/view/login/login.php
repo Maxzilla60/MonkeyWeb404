@@ -13,8 +13,8 @@
 
 <div class ="home">
     <div class="item">
-        <div class="content"></div>
-        <form name="loginForm" action="<?php echo URL; ?>webdev/validateUser" onsubmit="return validate()" method="POST" class="form-horizontal">
+        <div class="content">
+        <form name="loginForm" onsubmit="return validate();" method="POST" class="form-horizontal" action="<?php echo URL; ?>validation/validateUser">
             <div class="logo">
                 <img class="logoLogin" style="height: 115px;" src="https://www.pxl.be/Assets/website/pxl_algemeen/afbeeldingen/grotere_versie/1314_logo_pxl_it.png"></img>
             </div>
@@ -31,6 +31,7 @@
             </div>
         </form>
     </div>
+</div>
 </div>
 </div>
 

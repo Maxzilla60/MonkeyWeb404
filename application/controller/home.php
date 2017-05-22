@@ -16,11 +16,9 @@ class Home extends Controller
      */
     public function index()
     {
-        // load views
+        session_start();
+        $_SESSION["valid_user"]= null;
         require APP . 'view/login/login.php';
         require APP . 'view/_templates/loginFooter.php';
-      /** require APP . 'view/_templates/header.php';
-        require APP . 'view/home/index.php';
-        require APP . 'view/_templates/footer.php';*/
     }
 }
