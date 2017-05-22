@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Werkpakket 5 - Local Storage</title>
+	<title>Werkpakket 5</title>
 </head>
 <body>
-<h1>Werkpakket 5</h1>
-<p>HMTL5 API - Local Storage</p>
+<h1>Werkpakket 5 - HMTL5 API: Local & Session Storage</h1>
+<h3>Voorbeeld Local Storage</h3>
 
 <!-- Bron: W3Schools. Link: https://www.w3schools.com/html/html5_webstorage.asp -->
 <script>
-    function clickCounter() {
-        if(typeof(Storage) !== "undefined") { 									//Checken of de browser localStorage of sessionStorage ondersteunt
-            if (localStorage.clickcount) { 										//ClickCount is hier de naam van wat je gaat opslaan
-                localStorage.clickcount = Number(localStorage.clickcount)+1; 	//Updaten van de clickcount
-																				//Number() is nodig voor het converteren van de waarden, aangezien ClickCount default als string is ingesteld
-            } else {															//Geen ondersteuning, dus waarde wordt op 1 gezet
-                localStorage.clickcount = 1;
+    function localClickCounter() {
+        if(typeof(Storage) !== "undefined") { 											//Checken of de browser localStorage of sessionStorage ondersteunt
+            if (localStorage.clickcountlocal) { 										//ClickCount is hier de naam van wat je gaat opslaan
+                localStorage.clickcountlocal = Number(localStorage.clickcountlocal)+1; 	//Updaten van de clickcount
+																						//Number() is nodig voor het converteren van de waarden, aangezien ClickCount default als string is ingesteld
+            } else {																	//Geen ondersteuning, dus waarde wordt op 1 gezet
+                localStorage.clickcountlocal = 1;
             }
-            document.getElementById("result").innerHTML = "Je hebt " + localStorage.clickcount + " keer op de knop geklikt.";
+            document.getElementById("localResult").innerHTML = "Je hebt " + localStorage.clickcountlocal + " keer op de knop geklikt.";
         } else {
-            document.getElementById("result").innerHTML = "Sorry, deze browser ondersteunt web storage niet.";
+            document.getElementById("localResult").innerHTML = "Sorry, deze browser ondersteunt web storage niet.";
         }
     }
 </script>
 
-<p><button onclick="clickCounter()" type="button">Klik</button></p>
+<p><button onclick="localClickCounter()" type="button">Klik voor local storage</button></p>
 
-<div id="result"></div>
+<div id="localResult"></div>
 
 <p>Klik op de knop om de teller te verhogen.</p>
 <p>
 	Na het sluiten van de browser tab blijft de data opgeslagen, dit is omdat we gebruik maken van 'localStorage';
 	sessionStorage houdt de data bij per sessie.
 </p>
+
+
+
+<h3>Voorbeeld Session Storage</h3>
+
+<script>
+    function sessionClickCounter() {
+        if(typeof(Storage) !== "undefined") { 													//Checken of de browser localStorage of sessionStorage ondersteunt
+            if (sessionStorage.clickcountsession) { 											//ClickCount is hier de naam van wat je gaat opslaan
+                sessionStorage.clickcountsession = Number(sessionStorage.clickcountsession)+1;	//Updaten van de clickcount
+																								//Number() is nodig voor het converteren van de waarden, aangezien ClickCount default als string is ingesteld
+            } else {																			//Geen ondersteuning, dus waarde wordt op 1 gezet
+                sessionStorage.clickcountsession = 1;
+            }
+            document.getElementById("sessionResult").innerHTML = "Je hebt " + sessionStorage.clickcountsession + " keer op de knop geklikt.";
+        } else {
+            document.getElementById("sessionResult").innerHTML = "Sorry, deze browser ondersteunt web storage niet.";
+        }
+    }
+</script>
+
+<p><button onclick="sessionClickCounter()" type="button">Klik voor session storage</button></p>
+
+<div id="sessionResult"></div>
+
+<p>Zelfde principe als voorbeeld hierboven. Klik op de knop om de teller te verhogen.</p>
+<p>
+	Session onthoudt data per window of tab. Dit wil zeggen dat als je een refresh uitvoert op de openstaande
+	tab, de data blijft onthouden, net zoals bij local storage.
+</p>
+<p>
+	Sluit je de tab of window en open je het opnieuw,
+	werd de data verwijderd, in tegenstelling tot de local storage.
+</p>
+
 
 </body>
 </html>
