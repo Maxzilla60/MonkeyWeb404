@@ -1,12 +1,22 @@
 button{
     width: 100px;
+    background-color: #b2e2ff;
+    border-radius: 20px;
+    border: 2px;
 }
 input{
-    margin: 2px;
+    margin: 10px;
 }
 #container{
     width: 100%;
     text-align: center;
+}
+h1{
+    background-color: #b2e2ff;
+    width: 100%;
+    font-family: "Comic Sans MS";
+    font-size: 40px;
+    border-radius: 20px;
 }
 @media screen and (min-width: 320px) {
     img{
@@ -19,6 +29,9 @@ input{
     img{
         width: 150px;
         height: 150px;
+    }
+    h1{
+        font-size: 30px;
     }
 
 }

@@ -1,41 +1,34 @@
-
-var url = "http://192.168.217.134/~user/monkey/api/events/";
-
-document.getElementById("searchButton").addEventListener("click",getId);
-document.getElementById("deleteButton").addEventListener("click",deleteID);
-
-function getId(){
-    var getID = document.getElementById("getID").value;
-   fetch(url + getID)
-       .then(function (response) {
-           return response.json();
-       })
-       .then(function (j) {
-           console.log(j)
-           j.forEach(printEvent)
-       });
+function getId(id){
+    var url = "http://192.168.217.134/~user/monkey/api/events/";
+   fetch(url + id, {
+       method: 'GET'
+   }).then(function (response) {
+       return response.json();
+   }).then (function (j) {
+       printEvent(j[0]);
+   });
 }
-function printEvent(event){
+function printEvent(event) {
     var div = document.getElementById("eventDiv");
-    div.innerHTML = event.id;
+    div.innerHTML = "Event id: " + event.id;
     div.innerHTML = div.innerHTML + "<br>";
-    div.innerHTML = div.innerHTML + event.personid;
+    div.innerHTML = div.innerHTML + "Person id: " + event.personid;
     div.innerHTML = div.innerHTML + "<br>";
-    div.innerHTML = div.innerHTML + event.startdate;
+    div.innerHTML = div.innerHTML + "Startdate: " + event.startdate;
     div.innerHTML = div.innerHTML + "<br>";
-    div.innerHTML = div.innerHTML + event.enddate;
+    div.innerHTML = div.innerHTML + "Enddate: " + event.enddate;
     div.innerHTML = div.innerHTML + "<br>";
-    div.innerHTML = div.innerHTML + event.name;
+    div.innerHTML = div.innerHTML + "Eventname: " + event.name;
 }
 
-    function deleteID() {
-        var delID = document.getElementById("delID").value;
-        if (confirm('Do you want to delete evenement ' + delID + '?')) {
-            fetch(url + delID + "/", {
-                method: 'DELETE',
-            }).then(
+    function deleteID(id) {
+        var url = "http://192.168.217.134/~user/monkey/api/events/";
+        if (confirm('Do you want to delete evenement ' + id + '?')) {
+            fetch(url + id, {
+                method: 'DELETE'
+            }).then(function (response) {
                 window.location.reload()
-            );
+            })
         }
     }
 

@@ -4,20 +4,23 @@
     <title>Monkey Business</title>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet" type="text/css"/>
-
+    <script src="scriptWP3.js"></script>
 </head>
 <body>
 <div id="container">
-    <h1>Monkey bussines</h1>
-    <img src="monkey.png">
-    <form>
-        <input type="text" id="getID"><button id="searchButton">get ID</button>
-        <br>
-        <input type="text" id="delID"><button id="deleteButton">delete ID</button>
-    </form>
+    <div id="head">
+        <h1>Monkey business</h1>
+    </div>
 
+    <img src="monkey.png">
+    <br>
+    <input type="text" id="getID">
+    <button id="searchButton" onclick="getId(document.getElementById('getID').value)">get ID</button>
+    <br>
+    <input type="text" id="delID">
+    <button id="deleteButton" onclick="deleteID(document.getElementById('delID').value)">delete ID</button>
     <div id="eventDiv"></div>
 </div>
 </body>
-        <script src="scriptWP3.js"></script>
+
 </html>
