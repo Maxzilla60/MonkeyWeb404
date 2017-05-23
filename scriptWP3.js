@@ -27,7 +27,7 @@ function printEvent(event) {
             fetch(url + id, {
                 method: 'DELETE'
             }).then(function (response) {
-                window.location.reload()
+                console.log(response)
             })
         }
     }
